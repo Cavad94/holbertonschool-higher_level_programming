@@ -1,1 +1,1 @@
-This project contains tasks about Python exceptions.
+Project: Python - Exceptions. Task: 0. Safe list printing
