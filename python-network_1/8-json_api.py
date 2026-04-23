@@ -8,7 +8,6 @@ import sys
 
 
 if __name__ == "__main__":
-    # Əgər arqument verilməyibsə, q-nü boş string edirik
     if len(sys.argv) < 2:
         q = ""
     else:
@@ -19,14 +18,14 @@ if __name__ == "__main__":
 
     try:
         r = requests.post(url, data=payload)
-        # JSON-u təhlil etməyə çalışırıq
         json_content = r.json()
 
         if not json_content:
             print("No result")
         else:
-            print("[{}] {}".format(json_content.get('id'), json_content.get('name')))
+            # Sətri bölərək E501 xətasının qarşısını alırıq
+            print("[{}] {}".format(json_content.get('id'),
+                                   json_content.get('name')))
 
     except ValueError:
-        # Əgər r.json() uğursuz olarsa (JSON formatı səhvdirsə)
         print("Not a valid JSON")
