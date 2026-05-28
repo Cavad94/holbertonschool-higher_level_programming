@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""
-This module defines a Square class.
-"""
+"""Bu modul boş bir Square klası təyin edir."""
 
 
 class Square:
-    """
-    An empty class Square that defines a square.
-    """
+    """Kvadratı təmsil edən boş bir klas."""
     pass
